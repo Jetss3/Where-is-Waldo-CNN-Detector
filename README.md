@@ -5,7 +5,7 @@ Training data is generated on-the-fly rather than from a fixed image set. For ea
 
 The CNN itself was trained to recognise Waldo's distinctive local features — red/white stripes, glasses, and a cane — from thousands of cropped training examples. The key limitation is that each tile is judged in complete isolation, so the model has no awareness of the surrounding scene. This means it can struggle to tell Waldo apart from other similarly dressed characters, since it can't use any broader context to help make that distinction.
 
-There are about 36 Keras models available in the `Keras Models` folder, from model generation 10 the accuracy improved drastically however it is still not reccommended to use these models in any commercial or professional capacity.
+There are about 36 Keras models available in the `Keras Models` folder, from model generation 10 the accuracy improved drastically however, it is still not reccommended to use these models in any commercial or professional capacity.
 
 ---
 
