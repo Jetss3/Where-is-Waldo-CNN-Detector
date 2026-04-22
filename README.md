@@ -1,6 +1,6 @@
 # Where is Waldo CNN Detector
 
-**Made by [Silvan-vd-Sande](https://github.com/Silvan-vd-Sande)** and [Jetss3](https://github.com/Jetss3)**
+**Made by [Silvan-vd-Sande](https://github.com/Silvan-vd-Sande) and [Jetss3](https://github.com/Jetss3) as an AI-focussed project for Creative Technology at the University of Twente** 
 
 A program with a Convolutional Neural Network to be able to find Waldo from the book series 'Where is Waldo?' The model works by chopping the book page into hundreds of small 128×128 pixel windows and feeding each one through a CNN, which outputs a score between 0 and 1 representing how likely Waldo is to be in that patch. Once every tile has been scored, the one with the highest score is highlighted as the predicted location. If that's wrong, the user can step through the next-best matches one by one.
 
