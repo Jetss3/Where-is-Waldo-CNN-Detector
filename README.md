@@ -3,6 +3,8 @@ A program with a Convolutional Neural Network to be able to find Waldo from the 
 
 Training data is generated on-the-fly rather than from a fixed image set. For each positive sample, a 128×128 crop is placed around Waldo's bounding box with a small random jitter of up to ±16 pixels, and a visibility score is calculated based on how much of Waldo actually falls within the crop window. Negative samples are drawn from random locations guaranteed not to overlap with Waldo. Random brightness, contrast, and Gaussian noise augmentations are applied to both, and class balance is enforced dynamically since non-Waldo tiles vastly outnumber Waldo ones. This approach means the model sees a virtually unlimited number of unique tile variations across a typical training run of around 19 million tile exposures.
 
+![image description](README/gui.png)
+
 The CNN itself was trained to recognise Waldo's distinctive local features — red/white stripes, glasses, and a cane — from thousands of cropped training examples. The key limitation is that each tile is judged in complete isolation, so the model has no awareness of the surrounding scene. This means it can struggle to tell Waldo apart from other similarly dressed characters, since it can't use any broader context to help make that distinction.
 
 There are about 36 Keras models available in the `Keras Models` folder, from model generation 10 the accuracy improved drastically however, it is still not reccommended to use these models in any commercial or professional capacity.
